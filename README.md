@@ -41,6 +41,36 @@ The project is divided into three main parts
          This section is designed to guide the bank in making 
          well-informed decisions for a successful credit card launch.
 
+## Key Measures 
+ 
+- Female = CALCULATE(COUNT(dim_customers[customer_id]),dim_customers[gender] = "Female")
+
+- Female % = DIVIDE([Female],[Total Customers],0)
+
+- Income = CALCULATE([Sum of avg income],ALLSELECTED())
+
+- Male = CALCULATE(COUNT(dim_customers[customer_id]),dim_customers[gender] = "Male")
+
+- Male % = DIVIDE([Male],[Total Customers],0)
+
+- Married = CALCULATE(COUNT(dim_customers[customer_id]),dim_customers[marital status] = "Married")
+
+- Married % = DIVIDE([Married],[Total Customers],0)
+
+- Single = CALCULATE(COUNT(dim_customers[customer_id]),dim_customers[marital status] = "Single")
+
+- Single % = DIVIDE([Single],[Total Customers],0)
+
+- Sum of avg income = SUM(dim_customers[avg_income])
+
+- Total Customers = COUNT(dim_customers[customer_id])
+
+- Total Sending = SUM(fact_spends[spend])
+
+- Utilization % = DIVIDE([TSpend],[Sum of avg income],0)
+
+   
+
 ## Dashboard in a Snapshot
 
 ### Home 
